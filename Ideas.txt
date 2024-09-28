@@ -1,0 +1,112 @@
+Gameplay Ideas:
+
+    COMBAT:
+        when attacking, choose from certain body parts at random to attack.
+        Each body part has a different debuff that can be applied to the enemy when damaged\destroyed.
+            The debuff gets stronger the more damage the body part takes.
+
+            Players are attacked in the same way, and their body parts can be damaged\destroyed.
+                The body parts can heal over time or with the use of items.
+                But body parts can be permanently destroyed if they take too much damage.
+                    The player can still play, but they will be at a disadvantage.
+                    They can replace the body part with a prosthetic.
+                        Prosthetics come in different rarities and have different stats.
+
+        BODY PARTS:
+            Upper body:
+                Head
+                    Neck
+                    Left Eye
+                    Right Eye
+                    Left Ear
+                    Right Ear
+                    Mouth
+                Stomach
+                Chest
+                Left Shoulder
+                Right Shoulder
+                Left arm
+                Right arm
+
+
+    CRAFTING:
+        Players can craft items using materials they find in the world.
+            The materials can be found in the world or dropped by enemies.
+                When a player kills an enemy, they can loot the body for materials, which roll from a loot table, specific to that enemy.
+                    The player can also loot chests and other containers for materials, which are randomly generated when entering a new area.
+                        Chests and room loot also rolls from a loot table.
+            The player can also break down items they find into materials.
+
+            The player can also craft prosthetics.
+                The player can also craft items to upgrade their prosthetics.
+
+
+    ENEMIES:
+        Enemies can be one of five types:
+            Humanoid
+            Beast
+            Machine
+            Elemental
+            Undead
+        Enemies can be one of five rarities:
+            Common
+            Uncommon
+            Rare
+            Epic
+            Legendary
+
+        When encountering enemies there is a chance that they are already wounded.
+        When encountering enemies there is a chance that they are already fighting another enemy.
+        When encountering enemies there is a chance that they are already dead.
+
+        LEVEL SCALING:
+            Enemies scale with the player's level.
+            Enemies scale with the player's gear.
+            Enemies scale with the player's skill.
+            Enemies scale with the player's location.
+
+        Level Calculation:
+            Enemy Level = Player Level + (Player Gear Level + Player Skill Level + Player Location Level) / 3
+
+       An enemy rolls its equipment from a table specific to its type and rarity when it spawns.
+         An enemy rolls its stats from a table specific to its type and rarity when it spawns.
+            Its stats are within a range based on its level and rarity.
+
+CLASS Heirarchy
+
+    class BodyPart
+        name
+        health
+        Efficiency
+        Missing(Boolean)
+        Gear Slot
+
+    class Hand (BodyPart)
+        Weapon
+
+   class Creature
+        name
+        health
+        level
+
+        (Make container class, use for chest, loot, and enemy too)
+        right-pocket
+        left-pocket
+
+        BodyPart[] bodyParts
+            left-hand
+            right-hand
+            head
+            chest
+            stomach
+            left-shoulder
+            right-shoulder
+            left-arm
+            right-arm
+            left-leg
+            right-leg
+            left-foot
+            right-foot
+
+
+Could add item names as prefixes and suffixes to randomly generate item names.
