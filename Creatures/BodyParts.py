@@ -1,4 +1,4 @@
-from Object import Armor, Weapon
+from Items.Object import Armor, Weapon
 from typing import Optional
 
 
@@ -43,6 +43,7 @@ class BodyPart:
 
     def calculate_efficiency(self):
         """
+        TODO:
         Take in level of creature as parameter
         Calculate efficiency based on level of creature and health of body part
         if crippled, efficiency is 0.25
@@ -62,6 +63,7 @@ class BodyPart:
 
     def take_damage(self,damage):
         """
+        TODO:
         Take in damage as parameter
         Calculate damage taken based on pure damage taken, armor value and subtract from health
         if health hits 0 roll for crippled or destroyed

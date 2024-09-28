@@ -1,6 +1,6 @@
 from enum import Enum
 
-
+#TODO: Delete or redo this file. Build stronger foundation for items and containers, will need to redo loot table file.
 class ItemType(Enum):
     WEAPON = "weapon"
     ARMOR = "armor"

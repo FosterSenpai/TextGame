@@ -1,5 +1,6 @@
 import random
 
+#TODO: Fix up methods, probs just delete them and remake. pull item names out into their own file .
 weapon_prefixes = [
     "Ancient", "Arcane", "Blazing", "Bloodthirsty", "Brutal", "Cursed", "Dark", "Deadly", "Divine", "Dragon's",
     "Dreadful", "Enchanted", "Eternal", "Exalted", "Fiery", "Forsaken", "Frost", "Ghostly", "Glorious", "Golden",

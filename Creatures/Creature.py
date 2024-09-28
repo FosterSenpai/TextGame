@@ -1,5 +1,6 @@
-from BodyParts import Hand, BodyPart
-import Object
+from Creatures.BodyParts import Hand, BodyPart
+from Items import Object
+
 
 class Creature:
     """
@@ -15,8 +16,6 @@ class Creature:
         self.name = name
         self.health = health
         self.level = level
-        # Body parts of the creature, list of BodyPart objects
-        # TODO: set dependent body parts for body parts
         self.body_parts = [                                          # Index
             Hand("Left Hand"),                                       # 0 - left hand
             Hand("Right Hand"),                                      # 1 - right hand
@@ -59,6 +58,7 @@ class Creature:
     @staticmethod # This is how you make a static method in Python
     def get_part(body_part_name):
         """
+        #TODO: there has to be a better way to do this, end up typing way too much
         Converts body part name string to its index in the body_parts list
         :param body_part_name: Name of body part as a string
         .. note:: Names are capitalized words
@@ -94,6 +94,7 @@ class Creature:
 
     def deal_damage(self, hand, enemy):
         """
+        TODO:
         Take in hand of attacking creature as parameter to get weapon damage
         Take in enemy as parameter to deal damage to enemy body part
             Choose random body part to deal damage to
@@ -103,7 +104,12 @@ class Creature:
         pass
 
 class Player(Creature):
+    #TODO: Implement player class, add inventory, money, experience, race?, class?
+    # skills(could add skills to base class for enemies to use)?, what else would be unique to a player?
+    # tiredness, hunger, thirst, sanity, temperature, weight, height, age ? maybe not that far
     pass
 
 class Enemy(Creature):
+    #TODO: Implement enemy class, add loot table, AI, faction, what else would be unique to an enemy?
+    # type/element, rarity, xp(given to player), money(given to player)
     pass

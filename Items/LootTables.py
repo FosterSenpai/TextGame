@@ -1,6 +1,5 @@
-import Object
-import Names
-from Names import generate_weapon_name
+from Items import Object
+from Creatures.Names import generate_weapon_name
 
 LootList1 = [Object.Weapon(generate_weapon_name(), 5, 1, 5),
              Object.Weapon(generate_weapon_name(), 5, 1, 6),
