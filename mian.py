@@ -1,6 +1,4 @@
 from Creature import Creature, Player, Enemy
-import Object
-from Names import generate_goblin_name
 
-print(generate_goblin_name())
-
+Foster = Player("Foster", 100, 1)
+print([str(part) for part in Foster.body_parts[Creature.get_part("Left Shoulder")].dependent_body_parts])
