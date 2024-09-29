@@ -101,6 +101,10 @@ class BodyPart:
 
         # Apply damage to health and calculate efficiency
         self.health -= damage_taken
+        self.owner.health -= damage_taken
+        if self.owner.health < 0:
+            self.owner.health = 0
+            self.owner.is_alive = False
         self.efficiency = self.calculate_efficiency(self.owner.level)
         if self.efficiency < 0:
             self.efficiency = 0
